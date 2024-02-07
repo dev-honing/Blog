@@ -9,7 +9,7 @@ const Container: React.FC<ContainerProps> = ({ className }) => {
   return (
     <div id="container" className={className}>
       <P />
-      <LongP />
+      {/* <LongP /> */}
     </div>
   );
 }
