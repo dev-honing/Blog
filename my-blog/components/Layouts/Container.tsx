@@ -1,4 +1,6 @@
 // components/Layouts/Container.tsx
+import { P, LongP } from '../Contents/P';
+
 interface ContainerProps {
   className?: string;
 }
@@ -6,7 +8,8 @@ interface ContainerProps {
 const Container: React.FC<ContainerProps> = ({ className }) => {
   return (
     <div id="container" className={className}>
-      컨테이너 컴포넌트
+      <P />
+      <LongP />
     </div>
   );
 }
