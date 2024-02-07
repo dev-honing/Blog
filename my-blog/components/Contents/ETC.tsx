@@ -1,4 +1,4 @@
-// components/Layouts/ETC.tsx
+// components/Contents/ETC.tsx
 interface ETCProps {
   className?: string;
 }
