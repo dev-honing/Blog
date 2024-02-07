@@ -1,8 +1,9 @@
 // app/page.tsx
-import Header from '@/components/Layouts/Header';
-import Container from '@/components/Layouts/Container';
-import Footer from '@/components/Layouts/Footer';
-import Etc from '@/components/Layouts/Etc';
+
+import Header from "@/components/Layouts/Header";
+import Container from "@/components/Layouts/Container";
+import Footer from "@/components/Layouts/Footer";
+import ETC from "@/components/Layouts/ETC";
 
 export default function MainPage() {
   return (
@@ -10,7 +11,7 @@ export default function MainPage() {
       <Header />
       <Container />
       <Footer />
-      <Etc />
+      <ETC />
     </div>
   );
 }

@@ -1,5 +1,14 @@
 // components/Layouts/Header.tsx
-
-export default function Header() {
-  return <div id="header">헤더 컴포넌트</div>
+interface HeaderProps {
+  className?: string;
 }
+
+const Header: React.FC<HeaderProps> = ({ className }) => {
+  return (
+    <div id="header" className={className}>
+      헤더 컴포넌트
+    </div>
+  );
+};
+
+export default Header;
