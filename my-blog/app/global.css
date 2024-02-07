@@ -1,0 +1,44 @@
+/* app/global.css */
+
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header {
+  width: 100vw;
+  height: 5vh;
+}
+
+#container {
+  width: 50vw;
+  height: max-content;
+}
+
+#footer {
+  width: 100vw;
+}
+
+/* 커스텀 색상 */
+.bg-primary {
+  background-color: #2ecc71;
+}
+
+.bg-point {
+  background-color: #3498db;
+}
+
+.bg-sub {
+  background-color: #81e3aa;
+}

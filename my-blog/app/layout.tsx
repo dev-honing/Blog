@@ -1,4 +1,5 @@
 // app/layout.tsx
+import "@/app/global.css"
 
 export const metadata = {
   // 제목과 설명 작성
