@@ -1,6 +1,7 @@
 // components/Layouts/Header.tsx
 import UpperHeader from "./Header/UpperHeader";
 import LowerHeader from "./Header/LowerHeader";
+import "./Header.css"
 interface HeaderProps {
   className?: string;
 }

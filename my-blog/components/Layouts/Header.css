@@ -1,0 +1,28 @@
+/* components/Layouts/Header.css */
+
+#upperHeader {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#upperHeader div {
+  display: flex;
+  flex-direction: row;
+}
+
+#lowerHeader {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lowerHeader div {
+  display: flex;
+}
