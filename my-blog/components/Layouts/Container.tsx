@@ -1,7 +1,7 @@
 // components/Layouts/Container.tsx
 import { P, LongP } from "../Contents/P";
 import Title from "../Contents/Title";
-
+import Details from "./Container/Details";
 interface ContainerProps {
   className?: string;
 }
@@ -12,7 +12,7 @@ const Container: React.FC<ContainerProps> = ({ className }) => {
       <div className="articleInfo">
         <div className="category"></div>
         <Title />
-        <div className="details"></div>
+        <Details />
       </div>
       <div className="articleContents">
         <P />
