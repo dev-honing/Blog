@@ -1,4 +1,6 @@
 // components/Layouts/Header.tsx
+import UpperHeader from "./Header/UpperHeader";
+import LowerHeader from "./Header/LowerHeader";
 interface HeaderProps {
   className?: string;
 }
@@ -6,7 +8,10 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ className }) => {
   return (
     <div id="header" className={className}>
-      헤더 컴포넌트
+      {/* 상단 헤더 */}
+      <UpperHeader />
+      {/* 하단 헤더 */}
+      <LowerHeader />
     </div>
   );
 };
