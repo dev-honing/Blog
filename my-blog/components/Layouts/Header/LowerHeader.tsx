@@ -26,8 +26,8 @@ export default function LowerHeader() {
           />
         </a>
       </div>
-      <div className="postTitle">
-        <a href="title">
+      <div className="title">
+        <a href="/title">
           {/* 포스팅 제목 */}
           <h2>AWS S3 업로드와 이미지 URL 적용</h2>
         </a>
