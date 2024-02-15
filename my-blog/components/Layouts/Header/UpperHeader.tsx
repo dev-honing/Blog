@@ -1,3 +1,8 @@
+// components/Layouts/Header/UpperHeader.tsx
+interface UpperHeaderProps {
+  className?: string;
+}
+
 export default function UpperHeader() {
   return (
     <div id="upperHeader">
@@ -17,7 +22,9 @@ export default function UpperHeader() {
       </div>
       <div className="blogName">
         {/* 블로그명 */}
-        <h1>재미 주도 개발</h1>
+        <a href="/">
+          <h1>재미 주도 개발</h1>
+        </a>
       </div>
       <div className="externalLinks">
         {/* 외부 링크들 */}
