@@ -1,15 +1,22 @@
-// components/Profiles/Icon.tsx
+// components/Profiles/Pic.tsx
 interface PicProps {
-  src: string;
+  src?: string;
   size: number;
 }
 
-const Icon: React.FC<PicProps> = ({ src, size }) => {
+const Pic: React.FC<PicProps> = ({ src, size }) => {
   return (
     <div style={{ width: size, height: size }}>
-      <img src={src} alt="profilePic" style={{ width: "100%", height: "100%" }} />
+      <img
+        src={
+          (src =
+            "https://my-icons-svg.s3.ap-northeast-2.amazonaws.com/profile.svg")
+        }
+        alt="profilePic"
+        style={{ width: "100%", height: "100%" }}
+      />
     </div>
   );
 };
 
-export default Icon;
+export default Pic;
