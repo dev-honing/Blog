@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Title from "@/components/Contents/Title";
 
 export default function LowerHeader() {
   return (
@@ -26,12 +27,10 @@ export default function LowerHeader() {
           />
         </a>
       </div>
-      <div className="title">
         <a href="/title">
           {/* 포스팅 제목 */}
-          <h2>AWS S3 업로드와 이미지 URL 적용</h2>
+          <Title />
         </a>
-      </div>
       <div className="additionalFunctions">
         {/* 부가 기능 */}
         <a href="/share">
