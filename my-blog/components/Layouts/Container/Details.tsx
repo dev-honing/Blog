@@ -9,8 +9,8 @@ export default function Details() {
       <Pic size={60} />
       <ID />
       <DateTime date="24-02-16" time="12:16"/>
-      <div className="views"></div>
-      <div className="comments"></div>
+      <div className="views">조회: 10</div>
+      <div className="comments">댓글: 1</div>
     </div>
   );
 }
