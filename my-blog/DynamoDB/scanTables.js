@@ -41,4 +41,4 @@ function scanTableItems(tableName, callback) {
   });
 }
 
-module.exports = scanTableItems;
+module.exports = {scanTableItems};
