@@ -13,7 +13,7 @@ const scanTableItems = require('./scanTables');
 scanTableItems('Posts', (err, items) => {
   if (err) {
     // 오류가 발생 시, 오류 메시지를 출력
-    console.error('테이블을 가져오는 중 오류가 발생했습니다:', err);
+    console.error('테이블을 가져오는 중 오류가 발생:', err);
   } else {
     // 성공 시, 가져온 아이템들을 콘솔에 출력
     console.log(items);
