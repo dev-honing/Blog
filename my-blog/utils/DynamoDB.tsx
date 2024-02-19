@@ -1,42 +1,33 @@
-// utils/DynamoDB.tsx
-
+// DynamoDB.tsx
 import AWS from "aws-sdk";
-import dotenv from "dotenv";
 
-dotenv.config(); // .env.local 파일에서 환경 변수 로드
-
-const ddb = new AWS.DynamoDB({
-  // .env.local 파일에서 설정한 환경 변수 사용
+AWS.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-  region: process.env.AWS_REGION,
+});
+
+const ddb = new AWS.DynamoDB({
+  region: "ap-northeast-2", // 리전을 직접 명시
 });
 
 /**
- * DynamoDB에 쿼리를 보내고 결과를 반환하는 함수
- * @param {AWS.DynamoDB.QueryInput} params DynamoDB 쿼리 실행을 위한 파라미터
- * @returns {Promise<AWS.DynamoDB.QueryOutput>} DynamoDB 쿼리의 결과를 나타내는 Promise
+ * 특정 테이블의 아이템들을 가져오는 함수
+ * @param {string} tableName 가져올 테이블의 이름
+ * @param {function} callback 콜백 함수
  */
-export function query(params: AWS.DynamoDB.QueryInput): Promise<AWS.DynamoDB.QueryOutput> {
-  return ddb.query(params).promise();
+function fetchTableItems(tableName: string, callback: Function): void {
+  const params = {
+    TableName: tableName,
+  };
+
+  ddb.scan(params, (err, data) => {
+    if (err) {
+      console.error(err);
+      callback(err, null);
+    } else {
+      callback(null, data.Items);
+    }
+  });
 }
 
-/**
- * DynamoDB에서 데이터를 가져오는 함수
- * @param {string} postId 가져올 데이터의 postId
- * @returns {Promise<any[]>} DynamoDB에서 가져온 데이터를 나타내는 Promise
- */
-export async function fetchData(postId: string): Promise<any[]> {
-  try {
-    const params = {
-      TableName: "Posts", // 테이블명
-      KeyConditionExpression: "postId = :postId", // postId 속성이 특정 값과 일치하는지를 나타내는 조건
-      ExpressionAttributeValues: { ":postId": { S: postId.toString() } }, // 쿼리에 사용할 값으로 postId를 문자열 형태로 변환하여 설정
-    };
-    const result = await query(params); // query 함수 호출
-    return result.Items ?? [];
-  } catch (error) {
-    console.error("Error fetching data from DynamoDB:", error);
-    throw error;
-  }
-}
+export default fetchTableItems;
