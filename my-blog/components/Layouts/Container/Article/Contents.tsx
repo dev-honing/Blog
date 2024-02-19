@@ -1,13 +1,14 @@
 // components/Layouts/Container/Article/Contents.tsx
+"use client"
 import { LongP, P } from "@/components/Contents/P";
-import DynamoFetch from "@/components/Contents/DynamoFetch";
+import RenderTables from "@/components/Contents/RenderTables";
 
 const Contents: React.FC = () => {
   return (
     <div className="article-contents">
       <P />
       {/* <LongP /> */}
-      <DynamoFetch />
+      <RenderTables />
     </div>
   );
 };
