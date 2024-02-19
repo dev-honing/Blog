@@ -1,4 +1,8 @@
-// fetchTables.js
+/**
+ * @file DynamoDB/scanTables.js
+ * @description DynamoDB의 테이블 아이템 스캔 스크립트
+ */
+
 const AWS = require("aws-sdk");
 const dotenv = require("dotenv");
 
@@ -15,8 +19,10 @@ const ddb = new AWS.DynamoDB({
  * 특정 테이블의 아이템들을 가져오는 함수
  * @param {string} tableName 가져올 테이블의 이름
  * @param {function} callback 콜백 함수
+ * @param {Error|null} callback.err 오류 객체. 성공 시 null
+ * @param {Array} callback.data 가져온 테이블 아이템들의 배열
  */
-function fetchTableItems(tableName, callback) {
+function scanTableItems(tableName, callback) {
   // DynamoDB의 스캔할 테이블에 대한 매개변수를 설정
   const params = {
     TableName: tableName, // 가져올 테이블명
@@ -35,4 +41,4 @@ function fetchTableItems(tableName, callback) {
   });
 }
 
-module.exports = fetchTableItems;
+module.exports = scanTableItems;
