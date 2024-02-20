@@ -16,5 +16,71 @@
       "providerPlugin": "awscloudformation",
       "service": "AppSync"
     }
+  },
+  "parameters": {
+    "AMPLIFY_storage_Posts_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Posts"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Posts_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Posts"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Posts_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Posts"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Posts_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Posts"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Posts_sortKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Posts"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Posts_sortKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Posts"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Posts_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Posts"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "Posts": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    }
   }
 }

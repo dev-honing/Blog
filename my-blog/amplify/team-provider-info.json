@@ -10,6 +10,19 @@
       "StackName": "amplify-amplify25ccb48944ef4-staging-101700",
       "StackId": "arn:aws:cloudformation:ap-northeast-2:912563712986:stack/amplify-amplify25ccb48944ef4-staging-101700/86258710-ccb4-11ee-babd-06028121a9a0",
       "AmplifyAppId": "d2fso17biycpmm"
+    },
+    "categories": {
+      "storage": {
+        "Posts": {
+          "tableName": "Posts",
+          "region": "ap-northeast-2",
+          "arn": "arn:aws:dynamodb:ap-northeast-2:912563712986:table/Posts",
+          "partitionKeyName": "postId",
+          "partitionKeyType": "S",
+          "sortKeyName": "dateTime",
+          "sortKeyType": "S"
+        }
+      }
     }
   }
 }
