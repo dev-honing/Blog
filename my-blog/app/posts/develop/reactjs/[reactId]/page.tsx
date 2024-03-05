@@ -7,7 +7,7 @@ export default function ReactDetails({
 }) {
   return (
     <div>
-      <h1>현재 URL: /posts/develop/react/{params.reactId}</h1>
+      <h1>현재 URL: /posts/develop/reactjs/{params.reactId}</h1>
     </div>
   );
 }
