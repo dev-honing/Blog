@@ -1,4 +1,4 @@
-// app/posts/develop/next/next.tsx
+// app/posts/develop/next/page.tsx
 
 export default function Next() {
   return (
