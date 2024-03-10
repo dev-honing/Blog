@@ -1,5 +1,5 @@
 // app/posts/page.tsx
-import { ToHome } from '../../components/Links/Links';
+import { ToHome } from '@/components/Links/Links';
 
 const Posts = () => {
   return <div className="posts">
