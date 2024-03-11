@@ -1,15 +1,35 @@
-"use client"
+'use client'
 // app/posts/page.tsx
-import { ToHome } from '@/components/Links/Links';
-import FetchRDS from '../../../components/FetchRDS';
-import Hello from '../../../components/Hello';
+import { useEffect, useState } from 'react';
+import postsData from '../../../data/posts.json';
+
+interface Post {
+  id: number;
+  category: string;
+  dateTime: string;
+  title: string;
+  tags?: string[];
+}
 
 const Posts = () => {
-  return <div className="posts">
-    <ToHome />
-    <h3>포스트 메인</h3>
-    <FetchRDS />
-    <Hello />
-  </div>
-}
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    setPosts(postsData);
+  }, []);
+
+  return (
+    <div>
+      {posts.map((post) => (
+        <div key={post.id}>
+          <h2>{post.title}</h2>
+          <p>Category: {post.category}</p>
+          <p>Date: {new Date(post.dateTime).toLocaleString()}</p>
+          {post.tags && <p>Tags: {post.tags.join(', ')}</p>}
+        </div>
+      ))}
+    </div>
+  );
+};
+
 export default Posts;
