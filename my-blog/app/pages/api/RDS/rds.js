@@ -1,4 +1,9 @@
+// app/pages/api/RDS/rds.js
 const mysql = require('mysql2');
+const dotenv = require('dotenv');
+
+// .env 파일 로드
+dotenv.config();
 
 // RDS 연결
 const rds = mysql.createConnection({
@@ -14,7 +19,6 @@ export default async (req, res) => {
   // MariaDB 쿼리 실행
   rds.query('SELECT * FROM Posts', function (err, results, fields) {
     if (err) {
-      console.error(err);
       res.status(500).json({ error: err });
     } else {
       res.status(200).json({ results });

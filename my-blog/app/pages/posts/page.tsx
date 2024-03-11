@@ -1,3 +1,4 @@
+"use client"
 // app/posts/page.tsx
 import { ToHome } from '@/components/Links/Links';
 import FetchRDS from '../../../components/FetchRDS';

@@ -1,4 +1,4 @@
-"use client"
+// components/FetchRDS.tsx
 import { useEffect, useState } from "react";
 
 interface Post {
