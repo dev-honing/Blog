@@ -1,9 +1,5 @@
 // app/pages/api/RDS/rds.js
 const mysql = require('mysql2');
-const dotenv = require('dotenv');
-
-// .env 파일 로드
-dotenv.config();
 
 // RDS 연결
 const rds = mysql.createConnection({
