@@ -1,13 +1,12 @@
-// app/api/route.js
+// app/api/test/route.js
 
 export async function GET() {
   const res = {
-    test: {
+    Test: {
       "id": 1,
-      "category": "Programming",
-      "dateTime": "2022-01-01T00:00:00Z",
-      "title": "Next.js Starts",
-      "tags": ["Next.js", "React", "JavaScript"],
+      "Greet": "Hello, Next API!",
+      "method": "GET",
+      "path": "/api/test"
     }
 }
 return Response.json(res)
